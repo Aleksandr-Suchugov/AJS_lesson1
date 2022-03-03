@@ -1,19 +1,23 @@
-require('core-js/modules/es.array.filter');
+"use strict";
 
-require('core-js/modules/es.object.to-string');
+require("core-js/modules/es.array.filter.js");
 
-const characters = [{
+require("core-js/modules/es.object.to-string.js");
+
+var characters = [{
   name: 'мечник',
-  health: 10,
+  health: 10
 }, {
   name: 'маг',
-  health: 100,
+  health: 100
 }, {
   name: 'маг',
-  health: 0,
+  health: 0
 }, {
   name: 'лучник',
-  health: 0,
+  health: 0
 }];
-const alive = characters.filter((item) => item.health > 0);
+var alive = characters.filter(function (item) {
+  return item.health > 0;
+});
 alive(characters);
